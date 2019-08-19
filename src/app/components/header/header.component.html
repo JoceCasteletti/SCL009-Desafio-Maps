@@ -1,5 +1,9 @@
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        Tiendas favoritas
+        {{title}}
     </a>
+    <button class="navbar-toggler" type="button" (click)="sidebarService.toggleCollapse()"
+    [attr.aria-expanded]="!isCollapsed"  aria-controls="sidebar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
