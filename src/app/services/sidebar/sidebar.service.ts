@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SidebarService {
-  public show = false;
+  public show = true;
   private collapsed: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
   constructor() { }
