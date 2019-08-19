@@ -1,2 +1,4 @@
 <app-sidebar></app-sidebar>
-<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+<agm-map [zoom]="zoom" [latitude]="latitude" [longitude]="longitude">
+  <agm-marker *ngFor="let marker of markerService.markers" [latitude]="marker.coordinates.latitude" [longitude]="marker.coordinates.longitude"></agm-marker>
+</agm-map>
