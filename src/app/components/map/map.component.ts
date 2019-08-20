@@ -14,7 +14,6 @@ export class MapComponent implements OnInit {
   constructor(public markerService: MarkerService) { }
 
   ngOnInit() {
-    // .markers.forEach(x => console.log(x))
   }
 
 }

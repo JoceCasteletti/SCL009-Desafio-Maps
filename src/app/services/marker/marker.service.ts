@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import markerCollection from './marker.collection.json';
 import {SimpleMarker} from '../../classes/simple-marker';
 import {SimpleCoordinates} from '../../classes/simple-coordinates';
-import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarkerService {
   markers: SimpleMarker[];
+  favoriteMarkers: SimpleMarker[] = [];
 
   constructor() {
     this.markers = markerCollection.map(x => {
@@ -23,7 +23,15 @@ export class MarkerService {
     });
   }
 
-  getMarkers(): Observable<SimpleMarker[]> {
-    return of(this.markers);
+  addFavoriteMarker(marker: SimpleMarker) {
+    if (!this.favoriteMarkers.includes(marker)) {
+      this.favoriteMarkers.push(marker);
+    }
+  }
+
+  removeFavoriteMarker(marker: SimpleMarker) {
+    if (this.favoriteMarkers.includes(marker)) {
+      this.favoriteMarkers = this.favoriteMarkers.filter(x => x !== marker);
+    }
   }
 }

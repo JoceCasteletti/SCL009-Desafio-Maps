@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 import { Subscription } from 'rxjs';
+import {MarkerService} from '../../services/marker/marker.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +12,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   isCollapsed: boolean;
 
-  constructor(private sidebarService: SidebarService) {
+  constructor(private sidebarService: SidebarService, public markerService: MarkerService) {
     this.subscription = this.sidebarService
       .isCollapsed().subscribe(isCollapsed => this.isCollapsed = isCollapsed);
    }

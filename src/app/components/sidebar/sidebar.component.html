@@ -1,3 +1,8 @@
 <div id="sidebar" [collapse]="isCollapsed" [isAnimated]="true">
-  <div class="well well-lg card card-block card-header">Some content</div>
+  <ul class="list-group">
+    <li *ngFor="let marker of markerService.favoriteMarkers" class="list-group-item">
+      <small class="mr-1">{{marker.name}}</small>
+      <button class="badge badge-danger" (click)="markerService.removeFavoriteMarker(marker)">Eliminar</button>
+    </li>
+  </ul>
 </div>

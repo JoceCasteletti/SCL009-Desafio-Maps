@@ -6,7 +6,7 @@
         <strong class="card-header">{{marker.name}}</strong>
         <div class="card-body">
           <p class="card-text"><small>{{marker.address}}</small></p>
-          <a href="#" class="btn btn-success btn-sm">Añadir a favoritos</a>
+          <a href="#" class="btn btn-success btn-sm" (click)="markerService.addFavoriteMarker(marker)">Añadir a favoritos</a>
         </div>
       </div>
     </agm-info-window>

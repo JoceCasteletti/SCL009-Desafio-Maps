@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
+import {SimpleMarker} from '../../classes/simple-marker';
 
 @Injectable({
   providedIn: 'root'
