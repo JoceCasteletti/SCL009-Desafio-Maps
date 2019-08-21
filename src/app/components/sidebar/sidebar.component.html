@@ -1,4 +1,4 @@
-<div id="sidebar" [collapse]="isCollapsed" [isAnimated]="true">
+<div id="sidebar" [collapse]="sidebarService.isCollapsed" [isAnimated]="true">
   <ul class="list-group">
     <li *ngFor="let marker of markerService.favoriteMarkers" class="list-group-item">
       <small class="mr-1">{{marker.name}}</small>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/favorites-maps",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

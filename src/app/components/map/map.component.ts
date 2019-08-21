@@ -7,13 +7,16 @@ import {MarkerService} from '../../services/marker/marker.service';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  latitude: number = 35;
-  longitude: number = -96;
-  zoom: number = 3;
+  latitude: number;
+  longitude: number;
+  zoom: number;
 
-  constructor(public markerService: MarkerService) { }
+  constructor(public markerService: MarkerService) {
+    this.latitude = 35;
+    this.longitude = -91;
+    this.zoom = 3;
+  }
 
   ngOnInit() {
   }
-
 }

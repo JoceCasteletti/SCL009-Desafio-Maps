@@ -8,19 +8,11 @@ import {MarkerService} from '../../services/marker/marker.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit, OnDestroy {
-  subscription: Subscription;
-  isCollapsed: boolean;
-
+export class SidebarComponent implements OnInit {
   constructor(private sidebarService: SidebarService, public markerService: MarkerService) {
-    this.subscription = this.sidebarService
-      .isCollapsed().subscribe(isCollapsed => this.isCollapsed = isCollapsed);
+
    }
 
   ngOnInit() {
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 }
