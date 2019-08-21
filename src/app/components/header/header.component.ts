@@ -11,7 +11,7 @@ import {MarkerService} from '../../services/marker/marker.service';
 export class HeaderComponent implements OnInit {
   title = 'FavStores';
 
-  constructor(private sidebarService: SidebarService, public markerService: MarkerService) {
+  constructor(public sidebarService: SidebarService, public markerService: MarkerService) {
   }
 
   ngOnInit() {
